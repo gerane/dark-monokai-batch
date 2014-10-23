@@ -1,0 +1,308 @@
+@import "syntax-variables";
+
+.editor-colors {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+}
+
+.editor {
+  background-color: @syntax-background-color;
+  color: @syntax-text-color;
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+  
+  &.is-focused .line-number.cursor-line-no-selection,
+  &.is-focused .line.cursor-line {
+    background-color: @lightblack;
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @blue;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+.editor .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+.editor .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+  color: @comment;
+}
+
+.keyword {
+  color: @pink;
+}
+
+.storage {
+  color: @pink;
+}
+
+.constant {
+  color: @orange;
+  
+  &.character {
+    color: @purple;
+  }
+
+  &.numeric {
+    color: @purple;
+  }
+
+  &.other {
+    color: @purple;
+  }
+}
+
+.variable {
+  color: @orange;
+
+  &.interpolation {
+    color: darken(@orange, 10%);
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @yellow;
+
+
+  &.regexp {
+    color: @blue;
+
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+
+  &.other.link {
+    color: @pink;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @light-gray;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @blue;
+    }
+
+    &.bold {
+      color: @orange;
+      font-style: bold;
+    }
+
+    &.italic {
+      color: @purple;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: darken(@red, 10%);
+  }
+
+}
+
+.support {
+  &.class, &.type {
+    font-style: italic;
+    color: @blue;
+  }
+  
+  &.constant {
+    color: @blue;
+  }
+
+  &.function {
+    color: @blue;
+
+    &.any-method {
+      color: @blue;
+    } 
+  }
+  
+  &.other.variable {
+  }
+}
+
+.entity {
+  &.name.type {
+    color: @green;
+    text-decoration: underline;
+  }
+  
+  &.name.function {
+    color: @green;
+  }
+
+  &.name.class, &.name.type.class {
+    text-decoration: underline;
+    color: @green;
+  }
+
+  &.name.section {
+    // This sets the color for label names and GOTO label in batch files.
+    // Example:
+    // GOTO END - END will be @green
+    // :END - :END will be @green
+    color: @green;
+  }
+  
+  &.other.inherited-class {
+    color: @green;
+  }
+
+  &.name.tag {
+    color: @pink;
+  }
+
+  &.other.attribute-name {
+    color: @green;
+
+    &.id {
+      color: @blue;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @pink;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @blue;
+  }
+
+  &.selector {
+    color: @purple;
+  }
+
+  &.separator {
+    background-color: @gray;
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-style: bold;
+  }
+
+  &.changed {
+    color: @yellow;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @purple;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @blue;
+  } 
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @pink;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @green;
+  }
+}
+
+.editor.mini .scroll-view {
+  padding-left: 1px;
+}
