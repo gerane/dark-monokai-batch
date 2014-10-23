@@ -1,5 +1,5 @@
-# dark-monokai-batch-syntax theme
+# dark-monokai-batch theme
 
 A Black Monokai theme with tweaked settings for Batch Scripts.
 
-![A screenshot of your theme](https://f.cloud.github.com/assets/69169/2289498/4c3cb0ec-a009-11e3-8dbd-077ee11741e5.gif)
+![](https://raw.github.com/gerane/dark-monokai-batch/master/screenshot.png)
