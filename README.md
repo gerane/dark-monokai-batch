@@ -2,4 +2,4 @@
 
 A Black Monokai theme with tweaked settings for Batch Scripts.
 
-![](https://raw.github.com/gerane/dark-monokai-batch/master/screenshot.png)
+![](https://raw.githubusercontent.com/gerane/dark-monokai-batch/master/screenshot.png)
