@@ -1,7 +1,7 @@
 {
   "name": "dark-monokai-batch",
   "theme": "syntax",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "A Black Monokai theme with tweaked settings for Batch Scripts.",
   "repository": "https://github.com/gerane/dark-monokai-batch",
   "license": "MIT",
