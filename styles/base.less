@@ -1,23 +1,23 @@
 @import "syntax-variables";
 
 // EDITOR BACKGROUND & FONT COLORS
-atom-text-editor, :host {
+atom-text-editor,atom-text-editor {
     background-color: @syntax-background-color;
     color: @syntax-text-color;
 }
 
-atom-text-editor, :host {
+atom-text-editor,atom-text-editor {
   background-color: @syntax-background-color;
   color: @syntax-text-color;
 
   .invisible-character {
     color: @syntax-invisible-character-color;
   }
-  
+
   .indent-guide {
     color: @syntax-indent-guide-color;
   }
-  
+
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
   }
@@ -38,12 +38,12 @@ atom-text-editor, :host {
       }
     }
   }
-  
+
   .line-number.cursor-line-no-selection,
   .line.cursor-line {
     background-color: @syntax-gutter-background-color-selected;
   }
-    
+
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
@@ -62,245 +62,245 @@ atom-text-editor, :host {
     background-color: @syntax-selection-color;
   }
 
-  .search-results .marker .region {
+  .search-results .syntax--marker .region {
     background-color: transparent;
     border: 1px solid @syntax-result-marker-color;
   }
 
-  .search-results .marker.current-result .region {
+  .search-results .syntax--marker.current-result .region {
     border: 1px solid @syntax-result-marker-color-selected;
   }
 }
 
-.comment {
+.syntax--comment {
   color: @comment;
 }
 
-.keyword {
+.syntax--keyword {
   color: @pink;
 }
 
-.storage {
+.syntax--storage {
   color: @pink;
 }
 
-.constant {
+.syntax--constant {
   color: @orange;
-  
-  &.character {
+
+  &.syntax--character {
     color: @purple;
   }
 
-  &.numeric {
+  &.syntax--numeric {
     color: @purple;
   }
 
-  &.other {
+  &.syntax--other {
     color: @purple;
   }
 }
 
-.variable {
+.syntax--variable {
   color: @orange;
 
-  &.interpolation {
+  &.syntax--interpolation {
     color: darken(@orange, 10%);
   }
 
-  &.parameter.function {
+  &.syntax--parameter.syntax--function {
     color: @syntax-text-color;
   }
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   background-color: @red;
   color: @syntax-background-color;
 }
 
-.string {
+.syntax--string {
   color: @yellow;
 
 
-  &.regexp {
+  &.syntax--regexp {
     color: @syntax-color-renamed;
 
-    .source.ruby.embedded {
+    .syntax--source.syntax--ruby.syntax--embedded {
       color: @orange;
     }
   }
 
-  &.other.link {
+  &.syntax--other.syntax--link {
     color: @pink;
   }
 }
 
-.punctuation {
-  &.definition {
-    &.comment {
+.syntax--punctuation {
+  &.syntax--definition {
+    &.syntax--comment {
       color: @light-gray;
     }
 
-    &.string,
-    &.variable,
-    &.parameters,
-    &.array {
+    &.syntax--string,
+    &.syntax--variable,
+    &.syntax--parameters,
+    &.syntax--array {
       color: @syntax-text-color;
     }
 
-    &.heading,
-    &.identity {
+    &.syntax--heading,
+    &.syntax--identity {
       color: @syntax-color-renamed;
     }
 
-    &.bold {
+    &.syntax--bold {
       color: @orange;
       font-style: bold;
     }
 
-    &.italic {
+    &.syntax--italic {
       color: @purple;
       font-style: italic;
     }
   }
 
-  &.section.embedded {
+  &.syntax--section.syntax--embedded {
     color: darken(@red, 10%);
   }
 
 }
 
-.support {
-  &.class, &.type {
+.syntax--support {
+  &.syntax--class, &.syntax--type {
     font-style: italic;
     color: @syntax-color-renamed;
   }
-  
-  &.constant {
+
+  &.syntax--constant {
     color: @syntax-color-renamed;
   }
 
-  &.function {
+  &.syntax--function {
     color: @syntax-color-renamed;
 
-    &.any-method {
+    &.syntax--any-method {
       color: @syntax-color-renamed;
-    } 
+    }
   }
-  
-  &.other.variable {
+
+  &.syntax--other.syntax--variable {
   }
 }
 
-.entity {
-  &.name.type {
+.syntax--entity {
+  &.syntax--name.syntax--type {
     color: @green;
     text-decoration: underline;
   }
-  
-  &.name.function {
+
+  &.syntax--name.syntax--function {
     color: @green;
   }
 
-  &.name.class, &.name.type.class {
+  &.syntax--name.syntax--class, &.syntax--name.syntax--type.syntax--class {
     text-decoration: underline;
     color: @green;
   }
 
-  &.name.section {
+  &.syntax--name.syntax--section {
     // This sets the color for label names and GOTO label in batch files.
     // Example:
     // GOTO END - END will be @green
     // :END - :END will be @green
     color: @green;
   }
-  
-  &.other.inherited-class {
+
+  &.syntax--other.syntax--inherited-class {
     color: @green;
   }
 
-  &.name.tag {
+  &.syntax--name.syntax--tag {
     color: @pink;
   }
 
-  &.other.attribute-name {
+  &.syntax--other.syntax--attribute-name {
     color: @green;
 
-    &.id {
+    &.syntax--id {
       color: @syntax-color-renamed;
     }
   }
 }
 
-.meta {
-  &.class {
+.syntax--meta {
+  &.syntax--class {
     color: @pink;
   }
 
-  &.link {
+  &.syntax--link {
     color: @orange;
   }
 
-  &.require {
+  &.syntax--require {
     color: @syntax-color-renamed;
   }
 
-  &.selector {
+  &.syntax--selector {
     color: @purple;
   }
 
-  &.separator {
+  &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color;
   }
 }
 
-.none {
+.syntax--none {
   color: @syntax-text-color;
 }
 
-.markup {
-  &.bold {
+.syntax--markup {
+  &.syntax--bold {
     color: @orange;
     font-style: bold;
   }
 
-  &.changed {
+  &.syntax--changed {
     color: @yellow;
   }
 
-  &.deleted {
+  &.syntax--deleted {
     color: @red;
   }
 
-  &.italic {
+  &.syntax--italic {
     color: @purple;
     font-style: italic;
   }
 
-  &.heading .punctuation.definition.heading {
+  &.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
     color: @syntax-color-renamed;
-  } 
+  }
 
-  &.inserted {
+  &.syntax--inserted {
     color: @green;
   }
 
-  &.list {
+  &.syntax--list {
     color: @pink;
   }
 
-  &.quote {
+  &.syntax--quote {
     color: @orange;
   }
 
-  &.raw.inline {
+  &.syntax--raw.syntax--inline {
     color: @green;
   }
 }
 
-.source.gfm .markup {
+.syntax--source.syntax--gfm .syntax--markup {
   -webkit-font-smoothing: auto;
-  &.heading {
+  &.syntax--heading {
     color: @green;
   }
 }
